@@ -7,9 +7,9 @@ const readline = require('readline-sync')
 var items = []
 
 /* the do-while loop has its exit condition at the end which means it always executes at least once. */
-do {
+while(true) {
   /* We capture the text input by the user. This is then converted into a String and finally any _whitespace_ (newline characters, spaces, etc) are removed. */
-	var input = String(readline.question('enter command: ')).trim() // try switching for a let... or a const...
+	let input = String(readline.question('enter command: ')).trim() // try switching for a let... or a const...
   /* The indexOf() function looks for the first ocurrance of the supplied string parameter or -1 if it is not found. Notice the use of === to compare the two values, this is a 'strict' comparison and should always be used instead of ==. It checks for equal values and equal type. */
 	if (input.indexOf('add ') === 0) {
     /* This time the indexOf() function is used to locate the first space character. */
@@ -19,7 +19,15 @@ do {
     /* console.log() prints to the terminal. */
 		console.log('adding "'+item+'"')
     /* All arrays have a built-in push() function which appends an item to their end. */
-		items.push(item)
+		
+		
+			if (items.indexOf(item) >-1) {
+		console.log("Already Added")
+	}
+	else{
+		items.push(item);
+	}
+		
 	}
 	if (input.indexOf('list') === 0) {
     /* Here we use a for...next loop to interate through all the array indexes. The let keyword defines a variable with _block_ scope (more on this later). */
@@ -28,5 +36,7 @@ do {
 			console.log(i+'. '+items[i])
 		}
 	}
+
   /* the code will loop unless the input was _exit_. Notice the use of !== in the comparison instead of the more typical !=. This is a strict negating comparison. This means 'not equal and not equal type' */
 } while (input !== 'exit')
+{break;}
