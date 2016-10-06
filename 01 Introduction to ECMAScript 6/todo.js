@@ -5,11 +5,11 @@ const readline = require('readline-sync')
 
 /* Here we declare an empty array which will be used to store the todo list items. */
 var items = []
-
+let input
 /* the do-while loop has its exit condition at the end which means it always executes at least once. */
 while(true) {
   /* We capture the text input by the user. This is then converted into a String and finally any _whitespace_ (newline characters, spaces, etc) are removed. */
-	let input = String(readline.question('enter command: ')).trim() // try switching for a let... or a const...
+	input = String(readline.question('enter command: ')).trim() // try switching for a let... or a const...
   /* The indexOf() function looks for the first ocurrance of the supplied string parameter or -1 if it is not found. Notice the use of === to compare the two values, this is a 'strict' comparison and should always be used instead of ==. It checks for equal values and equal type. */
 	if (input.indexOf('add ') === 0) {
     /* This time the indexOf() function is used to locate the first space character. */
@@ -20,12 +20,17 @@ while(true) {
 		console.log('adding "'+item+'"')
     /* All arrays have a built-in push() function which appends an item to their end. */
 		
+		if (items.splice(0)){
+			console.log("removing "+item)
+		}
+			
+			
 		
-			if (items.indexOf(item) >-1) {
+			if (items.indexOf(item) >-1) { /* if the item is added twice will print already added */
 		console.log("Already Added")
 	}
 	else{
-		items.push(item);
+		items.push(item); /*otherwise it will push the items if not duplicate*/
 	}
 		
 	}
