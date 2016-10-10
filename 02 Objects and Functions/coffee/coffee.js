@@ -10,11 +10,11 @@ module.exports = function(roast, ounces = defaultSize) { // can't use arrow func
 	this.roast = roast
 	this.ounces = ounces
 	this.getSize = () => {
-		if (this.ounces === 8) {
+		if (this.ounces <= 8) {
 			return 'small'
-		} else if (this.ounces === 12) {
+		} else if (this.ounces > 9 && this.ounces < 12) {
 			return 'medium'
-		} else if (this.ounces === 16) {
+		} else if (this.ounces > 12) {
 			return 'large'
 		}
 	}
