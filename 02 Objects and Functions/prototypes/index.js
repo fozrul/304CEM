@@ -1,5 +1,6 @@
 
 String.prototype.palindrome = require('./palindrome')
+String.prototype.capitalise = require('./capitalise')
 
 const phrases = ['eve',
                'kayak',
@@ -15,6 +16,13 @@ for (const phrase of phrases) {
 		console.log(`"${phrase}" is NOT a palindrome`)
 	}
 }
+
+for(const phrase of phrases){ 
+	let answer = phrase.capitalise()
+	console.log(`"${phrase}" capitalised is "${answer}" capitalise`)
+}
+
+
 
 /*
 for (const phrase of phrases) {
