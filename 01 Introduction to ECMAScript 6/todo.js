@@ -20,8 +20,8 @@ while(true) {
 		console.log('adding "'+item+'"')
     /* All arrays have a built-in push() function which appends an item to their end. */
 		
-		if (items.splice(0)){
-			console.log("removing "+item)
+		if (items.splice()){ //removes items from the list
+			console.log("removing "+item) // logs it to the system
 		}
 			
 			
