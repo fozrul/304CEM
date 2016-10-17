@@ -1,8 +1,5 @@
 <img align="right" src="01 Introduction to ECMAScript 6/.images/uni_logo.png">
 .
-
-#Foz was here
-
 .
 #304CEM
 
