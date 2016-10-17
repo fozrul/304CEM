@@ -1,7 +1,7 @@
 <img align="right" src="01 Introduction to ECMAScript 6/.images/uni_logo.png">
 .
 .
-#304CEM
+Fozrul Islam #304CEM
 
 Welcome to **Web API Development**. You are probably viewing this via **GitHub** so one of the first tasks we will be carrying out is showing you how to *clone* your own copy of the code and maintain it on *your own Git repository*.
 

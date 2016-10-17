@@ -10,7 +10,7 @@ try {
 	const darkRoast = new Coffee('Dark Roast', 16)
 	console.log(darkRoast.order())
 
-	const specialBlend = new Coffee('Special Blend', 200)
+	const specialBlend = new Coffee('Special Blend', 200, 3)
 	console.log(specialBlend.order())
 
 	const kenyan = new Coffee('Kenyan')
