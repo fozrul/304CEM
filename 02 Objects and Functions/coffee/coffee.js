@@ -1,18 +1,20 @@
 
 'use strict'
 
+
 const defaultSize = 8
 const defaultShot = 0
 
 module.exports = function(roast, ounces = defaultSize, shot = defaultShot) { // can't use arrow functions here...
+
 	if (roast === undefined) {
 		throw new Error('missing roast type')
 	}
 	
 	this.roast = roast
-	this.ounces = ounces
-	
+	this.ounces = ounces	
 	this.getSize = () => {
+
 		if (this.ounces <= 8) {
 			return 'small'
 		} else if (this.ounces >= 9 && this.ounces <= 12) {
