@@ -22,9 +22,9 @@ try {
 
 
 
-		for(let rate in json.rates){
-		console.log(json.rate.toFixed(2))	
-		console.log(json.rates)	
+		for(let rate in json.rates){ 	// rate is defined in json.rates
+		console.log(rate)				// prints rate
+		console.log(json.rates[rate].toFixed(2))	// prints rate in rates to 2 decimal places
 		}
 		
 		
