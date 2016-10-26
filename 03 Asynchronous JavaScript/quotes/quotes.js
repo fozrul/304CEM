@@ -62,7 +62,8 @@ function scrapper(Title, Authors, Desciption, Price, Rating){
 	const url = `https://www.amazon.co.uk/JS-Next-ECMAScript-6-Aaron-Frost/dp/1449336361/ref=sr_1_1?ie=UTF8&qid=1475398158&sr=8-1&keywords=1449336361=${Title}&Author=${Author}&Description=${Description}&Price=${Price}&Rating=${Rating}`
 	console.log(url)
 	request.get(url, (err,res,body) => {
-	
+		if (err) return callback(new Error('page access error'))
+		const $ = cheerio.load(body,{decodeEntities:false})
 	
 	
 
